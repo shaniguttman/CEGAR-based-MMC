@@ -1,0 +1,32 @@
+The input of the system is an encoding file which creates a system by defining two models, the APs it contains, the states and the edges.
+
+In order to use the system, follow the next steps:
+1. Create an empty text file (.txt). At the end of editing the file, the content would look like this:
+***
+M;
+AP a b c d; 
+S 4 0(a b) 1i(a) 2(b c) 3i(a b); 
+E (0,2) (1,1) (3,2) (2,0) (0,1) (0,3);
+
+
+M;
+AP a; 
+S 2 10i(a b) 1i(a);
+E (0,1) (1,1); 
+
+***
+
+2. Open the file you have created and write the letter ‘M’ to declare a new model and end the line with ‘;’.
+3. Press Enter for a new line and write “AP”, then enter the space button and write the letters the model has. Between every letter, add a space too. At the end of the line write ‘;’.
+4. Press Enter for a new line and write ‘S’ for defining states, then enter the space button and write the number of states the model has. 
+a.	Add a space and write the index of the state, if the state is an initial state add the letter ‘i' next to the index. Add ‘(‘ and write the APs of this state. Add a space between each AP. Close the		brackets with ‘)’. You have defined a state.
+b.	 For adding another state, repeat step 4.a.
+c.	If you have finished adding states, add ‘;’ at the end of the line.
+5. Press Enter for a new line and write ‘E’ for defining edges. 
+a.	Enter space button and write ‘(‘. Write the index of the state the edge goes out from and then write ‘,’. Then write the index of the state the edge goes into and then write ‘)’.
+b.	For adding another edge, repeat step 5.a.
+c.	If you have finished adding edges, add ‘;’ at the end of the line.
+6. Press Enter twice.
+7. For adding the second model repeat steps 2-5, then save the file and close it.
+8. For starting the program click the exe file named "CEGAR based MMC.exe" and enter the path of the file you created, then press enter.
+9. The program will run and indicate whether the system you encoded in the file satifes the formula.
